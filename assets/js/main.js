@@ -20,7 +20,7 @@ function shuffle(arr) {
   return arr;
 }
 
-const SMALL_GIFS = shuffle(['gif-02', 'gif-03', 'gif-05', 'gif-06', 'gif-07', 'gif-10']);
+const SMALL_GIFS = shuffle(['gif-02', 'gif-03', 'gif-05', 'gif-06', 'gif-07', 'gif-10', 'gif-14', 'gif-15']);
 const LARGE_GIFS = ['gif-11', 'gif-12', 'gif-13'];
 
 const GIF_ITEMS = [
