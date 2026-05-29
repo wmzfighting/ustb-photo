@@ -79,18 +79,29 @@ const GIF_ITEMS = [
   });
 })();
 
-// === GIF Grid ===
+// === GIF Grid (lazy-loaded) ===
 (function() {
   const grid = document.getElementById('gifGrid');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      const video = entry.target.querySelector('video');
+      if (!video || video.src) return;
+      video.src = video.dataset.src;
+      observer.unobserve(entry.target);
+    });
+  }, { rootMargin: '200px' });
+
   GIF_ITEMS.forEach(({ base, large }) => {
     const item = document.createElement('div');
     item.className = 'gif-item' + (large ? ' gif-large' : '');
     item.innerHTML = `
-      <video src="assets/images/gif/${base}.mp4" autoplay loop muted playsinline
+      <video data-src="assets/images/gif/${base}.mp4" autoplay loop muted playsinline
              poster="assets/images/gif/${base}.jpg">
         <img src="assets/images/gif/${base}.gif" alt="动图延时" loading="lazy">
       </video>
     `;
+    observer.observe(item);
     grid.appendChild(item);
   });
 })();
