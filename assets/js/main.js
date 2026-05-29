@@ -20,12 +20,14 @@ function shuffle(arr) {
   return arr;
 }
 
-const SMALL_GIFS = shuffle(['gif-02', 'gif-03', 'gif-05', 'gif-06', 'gif-07', 'gif-10', 'gif-14', 'gif-15']);
+const SMALL_GIFS = shuffle(['gif-02', 'gif-03', 'gif-05', 'gif-06', 'gif-07', 'gif-10']);
 const LARGE_GIFS = ['gif-11', 'gif-12', 'gif-13'];
+const EXTRA_GIFS = ['gif-14', 'gif-15'];
 
 const GIF_ITEMS = [
   ...SMALL_GIFS.map(base => ({ base, large: false })),
-  ...LARGE_GIFS.map(base => ({ base, large: true }))
+  ...LARGE_GIFS.map(base => ({ base, large: true })),
+  ...EXTRA_GIFS.map(base => ({ base, large: false }))
 ];
 
 // === Hero Carousel ===
@@ -154,3 +156,20 @@ document.addEventListener('keydown', (e) => {
     updateLightbox();
   }
 });
+
+// === Scroll Spy ===
+(function() {
+  const sections = document.querySelectorAll('section[id]');
+  const links = document.querySelectorAll('.sidebar-link');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      const id = entry.target.id;
+      links.forEach(link => {
+        link.classList.toggle('active', link.getAttribute('href') === '#' + id);
+      });
+    });
+  }, { rootMargin: '-30% 0px -60% 0px' });
+
+  sections.forEach(s => observer.observe(s));
+})();
