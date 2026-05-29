@@ -59,12 +59,12 @@ const GIF_ITEMS = [
     goTo((current + 1) % HERO_FILES.length);
   }
 
-  interval = setInterval(next, 4000);
+  interval = setInterval(next, 3000);
 
   // Pause on hover
   const hero = document.getElementById('hero');
   hero.addEventListener('mouseenter', () => clearInterval(interval));
-  hero.addEventListener('mouseleave', () => { interval = setInterval(next, 4000); });
+  hero.addEventListener('mouseleave', () => { interval = setInterval(next, 3000); });
 })();
 
 // === Gallery Grid ===
