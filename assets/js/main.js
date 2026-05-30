@@ -61,6 +61,13 @@ const GIF_ITEMS = [
     goTo((current + 1) % HERO_FILES.length);
   }
 
+  function prev() {
+    goTo((current - 1 + HERO_FILES.length) % HERO_FILES.length);
+  }
+
+  document.getElementById('heroPrev').addEventListener('click', prev);
+  document.getElementById('heroNext').addEventListener('click', next);
+
   interval = setInterval(next, 3000);
 })();
 

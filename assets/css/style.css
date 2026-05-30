@@ -151,6 +151,25 @@ h2 .count {
 
 .hero-scroll:hover { opacity: 1; }
 
+.hero-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 3;
+  background: rgba(255,255,255,0.15);
+  border: none;
+  cursor: pointer;
+  padding: 10px 8px;
+  border-radius: 4px;
+  opacity: 0.5;
+  transition: opacity 0.2s;
+}
+
+.hero-arrow:hover { opacity: 0.9; }
+
+.hero-prev { left: 16px; }
+.hero-next { right: 16px; }
+
 @keyframes bounce {
   0%, 100% { transform: translateX(-50%) translateY(0); }
   50% { transform: translateX(-50%) translateY(6px); }
@@ -306,6 +325,8 @@ h2 .count {
 .download-link p {
   font-size: 1.05rem;
   color: var(--color-text-secondary);
+  overflow-wrap: break-word;
+  word-break: break-all;
 }
 
 .placeholder {
@@ -549,7 +570,11 @@ section {
 
 /* === Responsive === */
 @media (max-width: 768px) {
-  .sidebar { display: none; }
+  .sidebar {
+    left: 8px;
+    padding: 6px 0;
+  }
+  .sidebar-link { padding: 4px 10px; font-size: 0.75rem; }
   .hero-content h1 { font-size: 2.4rem; white-space: nowrap; }
   .hero-content p { font-size: 1rem; }
   .gallery-grid { grid-template-columns: repeat(2, 1fr); gap: 8px; }

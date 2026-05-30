@@ -2,7 +2,8 @@
 
 魏梦泽 北科摄影素材分享合集。
 
-[🌐 访问网站 (Cloudflare)](https://wmz-ustb-photography.pages.dev)
+- [🌐 Cloudflare Pages](https://wmz-ustb-photography.pages.dev)（国内推荐）
+- [🌐 GitHub Pages](https://wmzfighting.github.io/wmz-ustb-photography)（海外备用）
 
 ## 关于
 
