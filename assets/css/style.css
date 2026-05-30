@@ -654,11 +654,14 @@ section {
   h2 { font-size: 1.3rem; }
   .lightbox-prev { left: 8px; }
   .lightbox-next { right: 8px; }
+  .donate-item img { width: 160px; height: 160px; }
+  .donate-codes { gap: 20px; }
 }
 
 @media (max-width: 480px) {
   .gallery-grid { grid-template-columns: repeat(2, 1fr); gap: 6px; }
   .gif-grid { grid-template-columns: 1fr; }
-
   .hero-content h1 { font-size: 1.9rem; white-space: nowrap; }
+  .donate-item img { width: 130px; height: 130px; }
+  .donate-codes { gap: 12px; }
 }
