@@ -482,6 +482,17 @@ h2 .count {
   color: var(--color-text-light);
 }
 
+/* === Comments === */
+.comments-section {
+  padding: 60px 0;
+}
+
+.comments-intro {
+  color: var(--color-text-secondary);
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+}
+
 /* === Footer === */
 .footer {
   padding: 40px 0;
