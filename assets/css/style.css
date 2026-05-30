@@ -437,6 +437,51 @@ h2 .count {
 
 .timeline-body p:last-child { margin-bottom: 0; }
 
+/* === Donate === */
+.donate-section {
+  padding: 60px 0;
+  text-align: center;
+}
+
+.donate-section h2 {
+  justify-content: center;
+  border-bottom: none;
+  margin-bottom: 0.8rem;
+}
+
+.donate-intro {
+  color: var(--color-text-secondary);
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+}
+
+.donate-codes {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+.donate-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.donate-item img {
+  width: 180px;
+  height: 180px;
+  object-fit: contain;
+  border-radius: 8px;
+  border: 1px solid var(--color-border);
+  background: white;
+}
+
+.donate-item span {
+  font-size: 0.85rem;
+  color: var(--color-text-light);
+}
+
 /* === Footer === */
 .footer {
   padding: 40px 0;
